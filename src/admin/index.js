@@ -16,12 +16,13 @@ import firebase from "firebase/compat/app";
 import { UserList } from "./posts";
 
 const config = {
-  apiKey: "AIzaSyB-yzOdcTr83J_AXFSwUF22dvFdBW3Ubpk",
-  authDomain: "neo-bank-ae818.firebaseapp.com",
-  projectId: "neo-bank-ae818",
-  storageBucket: "neo-bank-ae818.appspot.com",
-  messagingSenderId: "248597643386",
-  appId: "1:248597643386:web:dbb0782c0b7d1d82cbfbc3",
+  apiKey: "AIzaSyCseLPq4LHT-7yAZY2Q04oYrvL4QIbw7cI",
+  authDomain: "neobank-86c46.firebaseapp.com",
+  projectId: "neobank-86c46",
+  storageBucket: "neobank-86c46.appspot.com",
+  messagingSenderId: "842821057138",
+  appId: "1:842821057138:web:57c64b9697a6bda59360eb",
+  measurementId: "G-JKVY9Z4LTF",
 };
 const options = {
   logging: true,
@@ -47,7 +48,7 @@ const dataProvider = jsonServerProvider("https://jsonplaceholder.typicode.com");
 const App = () => (
   <Admin dataProvider={dataProvider} authProvider={authProvider}>
     <Resource name="users" list={UserList} show={ShowGuesser} />
-    <Resource name="posts" list={ListGuesser} />
+    <Resource name="posts" list={ListGuesser} show={ShowGuesser} />
     <Resource name="comments" list={ListGuesser} />
   </Admin>
 );
